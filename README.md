@@ -23,3 +23,16 @@ This project is a RESTful API for managing books in a library system. The API al
 - Django
 - Django REST Framework
 
+### Clone the Repository
+
+```bash
+git clone https://github.com/krachid98/library-management-system-api.git
+cd library-management-system-api
+```
+
+## Create and Activate Virtual Environment
+```bash
+python3 -m venv env
+```
+
+
