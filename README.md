@@ -117,9 +117,9 @@ Authorization: Token your-auth-token
 ```
 
 ## Managing Favorites
-To add a book to favorites, send a POST request to /api/favorites/{bookId}/ with the token in the Authorization header.
-To delete a book to favorites, send a DELETE request to /api/favorites/{bookId}/ with the token in the Authorization header.
-To retrive user favorites, send a GET request to /api/favorites/ with the token in the Authorization header.
+- To add a book to favorites, send a POST request to /api/favorites/{bookId}/ with the token in the Authorization header.
+- To delete a book to favorites, send a DELETE request to /api/favorites/{bookId}/ with the token in the Authorization header.
+- To retrive user favorites, send a GET request to /api/favorites/ with the token in the Authorization header.
 
 ## Contributing
 Contributions are welcome! Please open an issue or submit a pull request for any changes.
