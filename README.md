@@ -48,7 +48,7 @@ python manage.py runserver
 ```
 
 ## API Endpoints
-- Authentication
+## Authentication
 - Register: POST /api/register/
 - Login: POST /api/login/
 - Logout: POST /api/logout/
