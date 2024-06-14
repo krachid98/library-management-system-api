@@ -65,5 +65,37 @@ python manage.py runserver
 - Add Favorite: POST /api/favorites/{bookId}/
 - Remove Favorite: DELETE /api/favorites/{bookId}/
 
+## Usage
+Register a New User
+Send a POST request to /api/register/ with the following payload:
 
+```bash
+{
+    "username": "yourusername",
+    "password": "yourpassword",
+    "email": "youremail@example.com"
+}
+```
 
+## Login
+Send a POST request to /api/login/ with the following payload:
+
+```bash
+{
+    "username": "yourusername",
+    "password": "yourpassword"
+}
+```
+
+The response will include an authentication token that should be used for authenticated requests.
+
+## Managing Books
+After logging in, use the provided token to perform CRUD operations on books. For example, to list all books, send a GET request to /api/books/ with the token in the Authorization header:
+
+```bash
+GET /api/books/
+Authorization: Token your-auth-token
+```
+
+## Managing Favorites
+To add a book to favorites, send a POST request to /api/favorites/{bookId}/ with the token in the Authorization header.
