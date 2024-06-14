@@ -90,7 +90,26 @@ Send a POST request to /api/login/ with the following payload:
 The response will include an authentication token that should be used for authenticated requests.
 
 ## Managing Books
-After logging in, use the provided token to perform CRUD operations on books. For example, to list all books, send a GET request to /api/books/ with the token in the Authorization header:
+After logging in, use the provided token to perform CRUD operations on books. 
+For example, to list all books, send a GET request to /api/books/ with the token in the Authorization header:
+
+```bash
+GET /api/books/
+Authorization: Token your-auth-token
+```
+
+To add a new book, send a POST request to api/books/ with the with the token in the Authorization header and the following payload:
+
+```bash
+{
+    "titolo": "title",
+    "autore": "author",
+    "isbn": "isbn",
+    "pubyear": "2024"
+}
+```
+
+Use the same payload with the following PUT request /api/books/{id}/ to edit a specific book.
 
 ```bash
 GET /api/books/
@@ -99,3 +118,8 @@ Authorization: Token your-auth-token
 
 ## Managing Favorites
 To add a book to favorites, send a POST request to /api/favorites/{bookId}/ with the token in the Authorization header.
+To delete a book to favorites, send a DELETE request to /api/favorites/{bookId}/ with the token in the Authorization header.
+To retrive user favorites, send a GET request to /api/favorites/ with the token in the Authorization header.
+
+## Contributing
+Contributions are welcome! Please open an issue or submit a pull request for any changes.
