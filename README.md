@@ -112,7 +112,7 @@ To add a new book, send a POST request to api/books/ with the with the token in 
 Use the same payload with the following PUT request /api/books/{id}/ to edit a specific book.
 
 ```bash
-GET /api/books/
+PUT /api/books/{id}/
 Authorization: Token your-auth-token
 ```
 
