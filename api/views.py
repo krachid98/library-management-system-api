@@ -164,4 +164,4 @@ class PreferitiViewSet(viewsets.ViewSet):
         preferito = get_object_or_404(Preferiti, utente = request.user, libro = libro)
         preferito.delete()
         
-        return Response(status = status.HTTP_204_NO_CONTENT)
+        return Response({"message": "Libro correttamente rimosso dai preferiti."}, status = status.HTTP_204_NO_CONTENT)
